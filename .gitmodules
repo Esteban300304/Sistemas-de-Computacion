@@ -1,0 +1,6 @@
+[submodule "TP4/TP4/kenel-modules"]
+	path = TP4/TP4/kenel-modules
+	url = https://gitlab.com/sistemas-de-computacion-unc/kenel-modules.git
+[submodule "TP4/kenel-modules"]
+	path = TP4/kenel-modules
+	url = https://gitlab.com/sistemas-de-computacion-unc/kenel-modules.git
