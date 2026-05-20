@@ -1,14 +1,7 @@
-# Nombre del ejecutable
-TARGET = hello
+obj-m += electro.o
 
-# Regla por defecto: compilar
 all:
-	gcc hello.c -o $(TARGET)
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
-# Regla de instalación (la que usará checkinstall)
-install:
-	install -m 0755 $(TARGET) /usr/local/bin/
-
-# Regla para limpiar archivos temporales
 clean:
-	rm -f $(TARGET)
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean

@@ -1,0 +1,85 @@
+Module                  Size  Used by
+snd_seq_dummy          12288  0
+snd_hrtimer            12288  1
+qrtr                   53248  2
+binfmt_misc            24576  1
+nls_iso8859_1          12288  1
+intel_rapl_msr         20480  0
+intel_rapl_common      53248  1 intel_rapl_msr
+snd_intel8x0           53248  1
+snd_ac97_codec        196608  1 snd_intel8x0
+ac97_bus               12288  1 snd_ac97_codec
+intel_uncore_frequency_common    16384  0
+intel_pmc_core        122880  0
+snd_pcm               192512  2 snd_intel8x0,snd_ac97_codec
+pmt_telemetry          16384  1 intel_pmc_core
+pmt_class              16384  1 pmt_telemetry
+intel_vsec             20480  1 intel_pmc_core
+snd_seq_midi           24576  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_rawmidi            57344  1 snd_seq_midi
+snd_seq               122880  9 snd_seq_midi,snd_seq_midi_event,snd_seq_dummy
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+i2c_piix4              32768  0
+rapl                   20480  0
+snd_timer              53248  3 snd_seq,snd_hrtimer,snd_pcm
+snd                   143360  11 snd_seq,snd_seq_device,snd_intel8x0,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi
+i2c_smbus              20480  1 i2c_piix4
+joydev                 32768  0
+vboxguest              57344  0
+soundcore              16384  1 snd
+input_leds             12288  0
+serio_raw              20480  0
+mac_hid                12288  0
+sch_fq_codel           24576  2
+vmwgfx                466944  1
+drm_ttm_helper         16384  2 vmwgfx
+ttm                   118784  2 vmwgfx,drm_ttm_helper
+msr                    12288  0
+parport_pc             53248  0
+ppdev                  24576  0
+lp                     28672  0
+parport                73728  3 parport_pc,lp,ppdev
+efi_pstore             12288  0
+nfnetlink              20480  1
+dmi_sysfs              24576  0
+ip_tables              32768  0
+x_tables               65536  1 ip_tables
+autofs4                57344  2
+btrfs                2088960  0
+blake2b_generic        20480  0
+raid10                 73728  0
+raid456               192512  0
+async_raid6_recov      20480  1 raid456
+async_memcpy           16384  2 raid456,async_raid6_recov
+async_pq               20480  2 raid456,async_raid6_recov
+async_xor              16384  3 async_pq,raid456,async_raid6_recov
+async_tx               16384  5 async_pq,async_memcpy,async_xor,raid456,async_raid6_recov
+xor                    20480  2 async_xor,btrfs
+raid6_pq              126976  4 async_pq,btrfs,raid456,async_raid6_recov
+raid1                  61440  0
+raid0                  24576  0
+linear                 16384  0
+dm_mirror              24576  0
+dm_region_hash         24576  1 dm_mirror
+dm_log                 20480  2 dm_region_hash,dm_mirror
+hid_generic            12288  0
+usbhid                 77824  0
+polyval_clmulni        12288  0
+polyval_generic        12288  1 polyval_clmulni
+hid                   262144  2 usbhid,hid_generic
+psmouse               217088  0
+ghash_clmulni_intel    16384  0
+e1000                 180224  0
+vga16fb                32768  0
+sha256_ssse3           32768  0
+ahci                   49152  2
+sha1_ssse3             32768  0
+vgastate               20480  1 vga16fb
+video                  77824  0
+pata_acpi              12288  0
+libahci                53248  1 ahci
+wmi                    28672  1 video
+aesni_intel           122880  0
+crypto_simd            16384  1 aesni_intel
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
