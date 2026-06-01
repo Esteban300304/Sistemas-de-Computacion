@@ -4,3 +4,6 @@
 [submodule "TP4/kenel-modules"]
 	path = TP4/kenel-modules
 	url = https://gitlab.com/sistemas-de-computacion-unc/kenel-modules.git
+[submodule "TP5/device-drivers"]
+	path = TP5/device-drivers
+	url = https://gitlab.com/sistemas-de-computacion-unc/device-drivers.git
